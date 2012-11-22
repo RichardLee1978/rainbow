@@ -7,6 +7,8 @@ Rainbow
 
 now we support the route like "/item/:id"
 
+you can get the controller path at "req.rb_path" in filter or controller program;
+
 ```
 var item={
     "/":{
