@@ -34,13 +34,13 @@ var item={
         }
     }
 }
-module.exports.controller=item;
+module.exports.controllers=item;
 var filter={ 
     "/":{
         get:["store/hello"]
     }  
 }
-module.exports.filter=filter;
+module.exports.filters=filter;
 ```
 
 
