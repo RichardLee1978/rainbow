@@ -5,35 +5,44 @@ Rainbow
 
 ###update 2012-12-22 by yutou
 
-now you can use this more automatically；
+now we support the route like "/item/:id"
 
-every object should have three part：controller，filter，template。
-
-their file structure should be equally；
 ```
----controllers
-     ---store
-          ---hello.js
----filters
-     ---store
-          ---hello.js
----templates
-     ---store
-          ---hello.html
+var item={
+    "/":{
+        "get":function(req,res,next){
+            res.end("all")
+            next();
+        },
+        "post":function(req,res,next){
+            
+        }
+    },
+    "/:id":{
+        "get":function(req,res,next){
+            res.end(req.params.id)
+            next();
+        },
+        "post":function(req,res,next){
+            res.end(req.params.id)
+        },
+        "update":function(req,res,next){
+       
+        },
+        "delete":function(req,res,next){
+        
+        }
+    }
+}
+module.exports.controller=item;
+var filter={ 
+    "/":{
+        get:["store/hello"]
+    }  
+}
+module.exports.filter=filter;
 ```
-attention:when controller is empty it can run at all.but you should write something to it;
 
-filters is not necessary；it's assign in controller like this : exports.get.filters = ['store/hello'];
-
-filters is not something match controller or others ,it maybe something common to do some check before process the request;
-
-when controller is process ,there is a setup processed,it will create some variable like: 
-
-req.rb_view tell you where is your template;
-
-req.rb_path tell you the relative path;
-
-when executed the controller req.rb_data is availble ,it's the data to render,zhen the program will render to the opposite template;
 
 
 
