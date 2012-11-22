@@ -3,6 +3,40 @@ Rainbow
 
 [简体中文](http://mytharcher.github.com/posts/npm-rainbow.html)
 
+###update 2012-12-22 by yutou
+
+now you can use this more automatically；
+
+every object should have three part：controller，filter，template。
+
+their file structure should be equally；
+
+---controllers
+     ---store
+          ---hello.js
+---filters
+     ---store
+          ---hello.js
+---templates
+     ---store
+          ---hello.html
+
+attention:when controller is empty it can run at all.but you should write something to it;
+
+filters is not necessary；it's assign in controller like this : exports.get.filters = ['store/hello'];
+
+filters is not something match controller or others ,it maybe something common to do some check before process the request;
+
+when controller is process ,there is a setup processed,it will create some variable like: 
+
+req.rb_view tell you where is your template;
+
+req.rb_path tell you the relative path;
+
+when executed the controller req.rb_data is availble ,it's the data to render,zhen the program will render to the opposite template;
+
+
+
 A node [Express][] router middleware for Ajax RESTful API base on certain folder path.
 
 Rainbow mapping all HTTP request route to controllers folder each as path to file as URL.
