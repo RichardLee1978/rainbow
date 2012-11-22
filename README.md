@@ -10,7 +10,7 @@ now you can use this more automatically；
 every object should have three part：controller，filter，template。
 
 their file structure should be equally；
-
+```
 ---controllers
      ---store
           ---hello.js
@@ -20,7 +20,7 @@ their file structure should be equally；
 ---templates
      ---store
           ---hello.html
-
+```
 attention:when controller is empty it can run at all.but you should write something to it;
 
 filters is not necessary；it's assign in controller like this : exports.get.filters = ['store/hello'];
