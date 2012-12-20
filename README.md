@@ -1,7 +1,7 @@
 Rainbow
 =======
 
-npm install rainbowY
+npm install rainbowy
 
 ###update 2012-12-21 by yutou
 
