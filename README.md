@@ -1,9 +1,13 @@
 Rainbow
 =======
 
-[简体中文](http://mytharcher.github.com/posts/npm-rainbow.html)
+npm install rainbowY
 
-###update 2012-12-22 by yutou
+###update 2012-12-21 by yutou
+
+now it support coffee script
+
+###update 2012-11-22 by yutou
 
 now we support the route like "/item/:id"
 
@@ -43,9 +47,12 @@ var filter={
     }  
 }
 module.exports.filters=filter;
+
 ```
 
 
+blow is rainbow's document
+======
 
 
 A node [Express][] router middleware for Ajax RESTful API base on certain folder path.

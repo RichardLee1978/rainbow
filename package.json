@@ -1,5 +1,5 @@
 {
-	"name": "rainbow",
+	"name": "rainbowY",
 	"description": "Express router middleware for RESTful API base on certain folder path",
 	"version": "0.0.1",
 	"author": "mytharcher <mytharcher@gmail.com>",
